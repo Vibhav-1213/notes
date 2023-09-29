@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: EntryPage(),
+      theme: ThemeData(brightness: Brightness.light),
     );
   }
 }
