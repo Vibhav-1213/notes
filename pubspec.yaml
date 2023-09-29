@@ -70,6 +70,11 @@ flutter:
     - images/tick.png
     - images/delete.png
     - images/coverpage.png
+    - images/bgimg.jpeg
+    - images/bgimg1.jpeg
+    - images/dblue.jpeg
+    - images/blue.jpeg
+    - images/B14.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
