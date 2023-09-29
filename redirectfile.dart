@@ -19,6 +19,7 @@ class _FilePageState extends State<RedirectFilePage> {
   TextEditingController note1 = new TextEditingController();
   TextEditingController noteedit = TextEditingController();
   TextEditingController contedit = TextEditingController();
+  TextEditingController date2 = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,6 +56,7 @@ class _FilePageState extends State<RedirectFilePage> {
                 Padding(
                   padding: EdgeInsets.only(top:0,left: 15,right: 20,bottom: 10),
                   child: TextField(
+                    maxLines: null,
                     controller: noteedit..text = "${Get.arguments["Title"].toString()}",
                     decoration: InputDecoration(
                       hintText: "Title",
@@ -72,6 +74,7 @@ class _FilePageState extends State<RedirectFilePage> {
                 Padding(
                   padding: EdgeInsets.only(top:0,left: 22.5,right: 20,bottom: 10),
                   child: TextField(
+                    maxLines: null,
                     controller: contedit..text = "${Get.arguments["Content"].toString()}",
                     decoration: InputDecoration(
                       hintText: "Note",
@@ -96,7 +99,15 @@ class _FilePageState extends State<RedirectFilePage> {
                 },
               label: Text("Delete note",style: TextStyle(fontSize: 20,color: Colors.red),)),
             ),
-          )
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.only(top: 100),
+              child: Align(
+                alignment: Alignment.center,
+                child: Text("Posted at : " + "${Get.arguments["Date"].toString()}",style: TextStyle(color: Colors.grey),)),
+            )
+          ),
         ],
       ),
     );
